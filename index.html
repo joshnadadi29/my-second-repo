@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DevOps Lifecycle Diagram</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Decision Spinner - Visual Explanation</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
@@ -14,85 +14,80 @@
     }
 
     h1 {
-      background-color: #2c3e50;
+      background-color: #34495e;
       color: white;
-      padding: 20px;
+      padding: 20px 0;
     }
 
     .diagram {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 20px;
-      gap: 30px;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px auto;
+      max-width: 800px;
     }
 
-    .stage {
+    .box {
       background-color: #3498db;
       color: white;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px;
+      width: 300px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+      font-weight: bold;
     }
 
     .arrow {
-      width: 40px;
-      height: 40px;
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/3c/Arrow_right_font_awesome.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin: auto;
+      font-size: 40px;
+      color: #555;
     }
 
-    .description {
+    .explanation {
       max-width: 800px;
-      margin: 20px auto;
+      margin: 20px auto 50px;
       text-align: left;
+      padding: 0 20px;
     }
 
-    .description p {
+    .explanation p {
       background-color: #ffffff;
-      padding: 10px;
-      border-left: 5px solid #3498db;
-      margin: 10px 0;
+      padding: 15px;
+      border-left: 5px solid #2980b9;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .box {
+        width: 90%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>DevOps Lifecycle</h1>
+
+  <h1>Visual Explanation: Daily Decision Spinner</h1>
 
   <div class="diagram">
-    <div class="stage">Plan</div>
-    <div class="arrow"></div>
-    <div class="stage">Develop</div>
-    <div class="arrow"></div>
-    <div class="stage">Build</div>
-    <div class="arrow"></div>
-    <div class="stage">Test</div>
-    <div class="arrow"></div>
-    <div class="stage">Release</div>
-    <div class="arrow"></div>
-    <div class="stage">Deploy</div>
-    <div class="arrow"></div>
-    <div class="stage">Operate</div>
-    <div class="arrow"></div>
-    <div class="stage">Monitor</div>
+    <div class="box"> HTML Structure</div>
+    <div class="arrow">↓</div>
+    <div class="box"> Styled with CSS</div>
+    <div class="arrow">↓</div>
+    <div class="box"> Button Click</div>
+    <div class="arrow">↓</div>
+    <div class="box"> JavaScript Picks a Random Choice</div>
+    <div class="arrow">↓</div>
+    <div class="box"> Result Displayed on Screen</div>
   </div>
 
-  <div class="description">
-    <p><strong>Plan:</strong> Define project goals, requirements, and roadmap before development begins.</p>
-    <p><strong>Develop:</strong> Write code collaboratively, using version control systems like Git.</p>
-    <p><strong>Build:</strong> Compile and package the application code into deployable artifacts.</p>
-    <p><strong>Test:</strong> Run automated/manual tests to ensure application quality and reliability.</p>
-    <p><strong>Release:</strong> Approve and prepare the build for deployment into production.</p>
-    <p><strong>Deploy:</strong> Push the release to production environments for end users.</p>
-    <p><strong>Operate:</strong> Manage and maintain the application in the live environment.</p>
-    <p><strong>Monitor:</strong> Continuously observe system performance, availability, and user experience.</p>
+  <div class="explanation">
+    <p><strong>HTML:</strong> Provides the structure — includes a heading, a button, and a result area.</p>
+    <p><strong>CSS:</strong> Styles the page with a clean layout, button design, and modern font.</p>
+    <p><strong>JavaScript:</strong> Waits for the button to be clicked, then randomly selects an item from a list like "Order Pizza", "Read a Book", etc.</p>
+    <p><strong>Logic:</strong> Uses <code>Math.random()</code> and <code>Math.floor()</code> to pick a random option from the array and then updates the result area with the selected action.</p>
+    <p><strong>Outcome:</strong> A fun and helpful decision tool that provides a random suggestion when the user is unsure what to do.</p>
   </div>
+
 </body>
 </html>
